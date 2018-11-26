@@ -1,9 +1,19 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary">
-  <span>RickAnderson.io</span>
-</mat-toolbar>
+<mat-sidenav-container class="side-nav">
+  <mat-sidenav #sidenav mode="side" [(opened)]="opened">
+    <navigation></navigation>
+  </mat-sidenav>
 
-<mat-card class="content">
-  <router-outlet></router-outlet>
-</mat-card>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button mat-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span style="margin-left: 16px;">RickAnderson.io</span>
+    </mat-toolbar>
 
+    <mat-card class="content">
+        <router-outlet></router-outlet>
+      </mat-card>
+  </mat-sidenav-content>
+</mat-sidenav-container>

@@ -1,0 +1,6 @@
+<mat-list class="nav-list">
+  <div *ngFor="let item of navList">
+      <mat-list-item class="nav-item" [routerLink]="item.route">{{item.text}}</mat-list-item>
+      <mat-divider></mat-divider>
+  </div>
+</mat-list>
