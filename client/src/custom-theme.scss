@@ -1,0 +1,109 @@
+@import '../node_modules/@angular/material/theming';
+
+@include mat-core();
+
+$custom-primary: (
+    50 : #e8e4fb,
+    100 : #c6baf6,
+    200 : #a08df0,
+    300 : #795fea,
+    400 : #5d3ce6,
+    500 : #401ae1,
+    600 : #3a17dd,
+    700 : #3213d9,
+    800 : #2a0fd5,
+    900 : #1c08cd,
+    A100 : #f7f6ff,
+    A200 : #c8c3ff,
+    A400 : #9890ff,
+    A700 : #8177ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-accent: (
+    50 : #fce6f7,
+    100 : #f7c0ec,
+    200 : #f296df,
+    300 : #ed6cd2,
+    400 : #e94dc9,
+    500 : #e52dbf,
+    600 : #e228b9,
+    700 : #de22b1,
+    800 : #da1ca9,
+    900 : #d3119b,
+    A100 : #ffffff,
+    A200 : #ffcef0,
+    A400 : #ff9be0,
+    A700 : #ff81d8,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-blue: (
+    50 : #e0e0ff,
+    100 : #b3b3ff,
+    200 : #8080ff,
+    300 : #4d4dff,
+    400 : #2626ff,
+    500 : #0000ff,
+    600 : #0000ff,
+    700 : #0000ff,
+    800 : #0000ff,
+    900 : #0000ff,
+    A100 : #ffffff,
+    A200 : #f2f2ff,
+    A400 : #bfbfff,
+    A700 : #a6a6ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+$custom-theme-primary: mat-palette($mat-light-blue);
+$custom-theme-accent: mat-palette($mat-purple, A200, A100, A400);
+$custom-theme-warn: mat-palette($mat-red);
+
+$custom-theme: mat-light-theme($custom-theme-primary, $custom-theme-accent, $custom-theme-warn);
+ @include angular-material-theme($custom-theme);
