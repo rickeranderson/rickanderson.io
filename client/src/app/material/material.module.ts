@@ -83,7 +83,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
     MatToolbarModule,
     MatTooltipModule,
     MatTreeModule,
-    ScrollingModule,
+    ScrollingModule
   ]
 })
 export class MaterialModule { }
