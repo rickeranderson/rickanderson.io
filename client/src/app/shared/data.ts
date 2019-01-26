@@ -1,4 +1,5 @@
 import { Post } from './models/post.model';
+import { Project } from './models/project.model';
 
 // yyyy-MM-dd
 export const PostData: Post[] = [
@@ -12,3 +13,27 @@ export const PostData: Post[] = [
         ]
     }
 ];
+
+export const ProjectData: Project[] = [
+    {
+        title: 'Portfolio Web',
+        description: 'This very web site you are looking at right now! This project was created using the Angular 7.x framework and Angular Material',
+        resources: [
+            {
+                key: 'Angular',
+                value: 'https://angular.io/'
+            },
+            {
+                key: 'Angular Material',
+                value: 'https://material.angular.io/'
+            }
+        ],
+        source: '',
+        demo: '',
+        languages: [
+            'TypeScript'
+        ]
+    }
+];
+
+

@@ -11,11 +11,16 @@ import { EffectsModule } from '@ngrx/effects';
 import { PostEffects } from './store/post-store/post.effects';
 import { postReducer } from './store/post-store/post.reducer';
 
+import { ProjectEffects } from './store/project-store/project.effects';
+import { projectReducer } from './store/project-store/project.reducer';
+
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { environment } from 'src/environments/environment.prod';
 import { SharedModule } from './shared/shared.module';
 import { NavigationComponent } from './navigation/navigation.component';
+import { CommonEffects } from './store/common-store/common.effects';
+import { commonReducer } from './store/common-store/common.reducer';
 
 @NgModule({
   declarations: [
@@ -28,10 +33,12 @@ import { NavigationComponent } from './navigation/navigation.component';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    EffectsModule.forRoot([PostEffects]),
+    EffectsModule.forRoot([PostEffects, ProjectEffects, CommonEffects]),
     StoreModule.forRoot(
       {
-        posts: postReducer
+        posts: postReducer,
+        projects: projectReducer,
+        common: commonReducer
       }
     ),
     StoreDevtoolsModule.instrument({

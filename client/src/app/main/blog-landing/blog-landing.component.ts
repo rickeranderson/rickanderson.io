@@ -3,6 +3,7 @@ import { AppState } from '../../store/app-state';
 import { Post } from '../../shared/models/post.model';
 import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
+import { commonReducer } from 'src/app/store/common-store/common.reducer';
 
 @Component({
   selector: 'blog-landing',
@@ -17,6 +18,7 @@ export class BlogLandingComponent implements OnInit {
 
   ngOnInit() {
     this.posts$ = this.store.select(x => x.posts);
+    this.store.dispatch(new commonReducer.)
   }
 
   filterBySearchTerm(posts: Post[]): Post[] {

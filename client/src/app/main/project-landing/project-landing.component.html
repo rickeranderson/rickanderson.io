@@ -1,3 +1,23 @@
-<p>
-  project-landing works!
-</p>
+<form class="search-form">
+  <mat-form-field class="search-full-width" >
+    <input matInput placeholder="Search" [(ngModel)]="searchTerm" name="search">
+  </mat-form-field>
+</form>
+<div *ngIf="(projects$ | async) as projects">
+  <div *ngFor="let project of filterBySearchTerm(projects)">
+    <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ project.title }}</mat-card-title>
+          <mat-card-subtitle>{{ project.date | date }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <p>{{ project.content }}</p>
+          <p>Tags: <span *ngFor="let tag of project.tags, let last = last">{{tag}}<span *ngIf="!last">, </span></span></p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>DETAILS</button>
+        </mat-card-actions>
+      </mat-card>
+  </div>
+  <!-- <pre>{{ projects | json }}</pre> -->
+</div>
