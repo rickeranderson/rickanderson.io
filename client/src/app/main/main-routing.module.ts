@@ -7,6 +7,11 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: 'projects',
+    pathMatch: 'full'
+  },
+  {
+    path: 'blog',
     component: BlogLandingComponent
   },
   {

@@ -24,3 +24,7 @@ html, body{
 .warn-color {
     color: mat-color($custom-theme-warn) !important;
 }
+
+.pointer {
+    cursor: pointer;
+}

@@ -21,6 +21,8 @@ import { SharedModule } from './shared/shared.module';
 import { NavigationComponent } from './navigation/navigation.component';
 import { CommonEffects } from './store/common-store/common.effects';
 import { commonReducer } from './store/common-store/common.reducer';
+import { aboutReducer } from './store/about-store/about.reducer';
+import { AboutEffects } from './store/about-store/about.effects';
 
 @NgModule({
   declarations: [
@@ -33,12 +35,13 @@ import { commonReducer } from './store/common-store/common.reducer';
     BrowserAnimationsModule,
     MaterialModule,
     SharedModule,
-    EffectsModule.forRoot([PostEffects, ProjectEffects, CommonEffects]),
+    EffectsModule.forRoot([PostEffects, ProjectEffects, CommonEffects, AboutEffects]),
     StoreModule.forRoot(
       {
         posts: postReducer,
         projects: projectReducer,
-        common: commonReducer
+        common: commonReducer,
+        about: aboutReducer
       }
     ),
     StoreDevtoolsModule.instrument({

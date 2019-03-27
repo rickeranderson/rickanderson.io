@@ -1,3 +1,5 @@
-<p>
-  about works!
-</p>
+<div *ngIf="(about$ | async) as about">
+  <h3>{{ about.title }}</h3>
+  <p>{{ about.content }}</p>
+</div>
+  

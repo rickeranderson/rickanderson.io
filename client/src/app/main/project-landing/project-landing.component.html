@@ -8,14 +8,20 @@
     <mat-card>
         <mat-card-header>
           <mat-card-title>{{ project.title }}</mat-card-title>
-          <mat-card-subtitle>{{ project.date | date }}</mat-card-subtitle>
+          <mat-card-subtitle><span *ngFor="let language of project.languages, let last = last">{{language}}<span *ngIf="!last">, </span></span></mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p>{{ project.content }}</p>
-          <p>Tags: <span *ngFor="let tag of project.tags, let last = last">{{tag}}<span *ngIf="!last">, </span></span></p>
+          <p>{{ project.description }}</p>
+          <p>Resources:
+            <span *ngFor="let resource of project.resources, let last = last">
+              <a [href]="resource.value">{{resource.key}}</a>
+              <span *ngIf="!last">, </span>
+          </span>
+          </p>
         </mat-card-content>
         <mat-card-actions>
-          <button mat-button>DETAILS</button>
+          <button class="pointer" mat-raised-button *ngIf="project.source" color="primary">View Source</button>
+          <button class="pointer" mat-raised-button *ngIf="project.demo" color="primary">View Demo</button>
         </mat-card-actions>
       </mat-card>
   </div>

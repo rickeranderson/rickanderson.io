@@ -10,7 +10,7 @@ export class NavigationComponent implements OnInit {
   navList = [
     {
       text: 'Blog',
-      route: ''
+      route: 'blog'
     },
     {
       text: 'Projects',

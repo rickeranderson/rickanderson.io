@@ -1,5 +1,6 @@
 import { Post } from './models/post.model';
 import { Project } from './models/project.model';
+import { About } from './models/about.model';
 
 // yyyy-MM-dd
 export const PostData: Post[] = [
@@ -28,12 +29,15 @@ export const ProjectData: Project[] = [
                 value: 'https://material.angular.io/'
             }
         ],
-        source: '',
-        demo: '',
+        source: 'https://www.github.com',
+        demo: 'http://www.rickanderson.io',
         languages: [
             'TypeScript'
         ]
     }
 ];
 
-
+export const AboutData: About = {
+    title: 'About Me',
+    content: 'I am a person'
+}
