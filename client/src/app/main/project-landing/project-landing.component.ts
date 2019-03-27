@@ -3,6 +3,7 @@ import { Observable } from 'rxjs';
 import { Store } from '@ngrx/store';
 import { AppState } from 'src/app/store/app-state';
 import { Project } from 'src/app/shared/models/project.model';
+import * as CommonActions from 'src/app/store/common-store/common.actions';
 
 @Component({
   selector: 'project-landing',
@@ -18,6 +19,7 @@ export class ProjectLandingComponent implements OnInit {
 
   ngOnInit() {
     this.projects$ = this.store.select(x => x.projects);
+    this.store.dispatch(new CommonActions.SetViewText('Projects'))
   }
 
   filterBySearchTerm(projects: Project[]): Project[] {
