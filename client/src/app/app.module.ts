@@ -23,11 +23,13 @@ import { CommonEffects } from './store/common-store/common.effects';
 import { commonReducer } from './store/common-store/common.reducer';
 import { aboutReducer } from './store/about-store/about.reducer';
 import { AboutEffects } from './store/about-store/about.effects';
+import { ClockComponent } from './navigation/clock/clock.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
+    ClockComponent,
   ],
   imports: [
     BrowserModule,
