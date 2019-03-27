@@ -30,18 +30,13 @@ export class ClockComponent implements OnInit {
   }
 
   updateOhare(ohare: string): void {
-    // document.getElementById('ohare-time').innerText = ohare;
     this.time = ohare;
   }
 
-  // updateGregorian(gregorian: string): void {
-  //   document.getElementById('gregorian-time').innerText = gregorian;
-  // }
 
   async run() {
     Promise.all([
       await this.ohareSecond(),
-      // await this.gregorianSecond()
     ]);
   }
 
@@ -50,12 +45,6 @@ export class ClockComponent implements OnInit {
       this.updateOhare(this.getOhareUTC());
     }, 432);
   }
-
-  // gregorianSecond() {
-  //   setInterval(() => {
-  //     this.updateGregorian(this.getCurrentGregorianDateTimeUTC());
-  //   }, 1000);
-  // }
 
   getCurrentGregorianDateTimeUTC(): string {
     const now = new Date();
