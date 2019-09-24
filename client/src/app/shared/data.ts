@@ -39,5 +39,9 @@ export const ProjectData: Project[] = [
 
 export const AboutData: About = {
     title: 'About Me',
-    content: 'I am a person'
+    content: [
+        'I am a software developer, recreational musician and amatuer CrossFit athlete.',
+        'I reside in Boise, ID and in 2017 graduated with a BS in Computer Science from Boise State University. I then began working at Boise State University on the Web Development team developing both internal and public facing web applcations primarily in Typescript/Angular and C#.',
+        'In my free time I enjoy playing around with languages and frameworks I have not used before and working on side projects.'
+    ]
 }

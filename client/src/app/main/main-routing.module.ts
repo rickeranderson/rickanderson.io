@@ -10,10 +10,10 @@ const routes: Routes = [
     redirectTo: 'projects',
     pathMatch: 'full'
   },
-  {
-    path: 'blog',
-    component: BlogLandingComponent
-  },
+  // {
+  //   path: 'blog',
+  //   component: BlogLandingComponent
+  // },
   {
     path: 'projects',
     component: ProjectLandingComponent

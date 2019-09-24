@@ -1,5 +1,6 @@
 <div *ngIf="(about$ | async) as about">
-  <h3>{{ about.title }}</h3>
-  <p>{{ about.content }}</p>
+  <!-- <h3>{{ about.title }}</h3> -->
+  <p *ngFor="let c of about.content" [innerHtml]="c"></p>
+  <button mat-raised-button color="primary" (click)="goToGithub()"><mat-icon>code</mat-icon> Github</button>
 </div>
   

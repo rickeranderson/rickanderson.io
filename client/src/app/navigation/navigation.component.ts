@@ -8,10 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class NavigationComponent implements OnInit {
 
   navList = [
-    {
-      text: 'Blog',
-      route: 'blog'
-    },
+    // {
+    //   text: 'Blog',
+    //   route: 'blog'
+    // },
     {
       text: 'Projects',
       route: 'projects'
