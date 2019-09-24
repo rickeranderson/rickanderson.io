@@ -10,6 +10,7 @@ import { AppState } from './store/app-state';
 export class AppComponent {
   title = 'client';
   currentView: string;
+  opened: boolean;
 
   constructor(private store: Store<AppState>){
     this.store.select(x => x.common).subscribe(val => {
