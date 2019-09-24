@@ -7,7 +7,7 @@ import { AboutComponent } from './about/about.component';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'projects',
+    redirectTo: 'about',
     pathMatch: 'full'
   },
   // {
